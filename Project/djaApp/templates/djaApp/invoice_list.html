@@ -17,7 +17,7 @@
         <main class="container">
             <div class="row">
                 <div class="col">
-                    {% for invoice in Invoice %}
+                    {% for invoice in invoices %}
                         <article class='invoice'>
                             <h2><a href="">{{ invoice.ID }}</a></h2>
                             <p>{{ invoice.status}}</p>
