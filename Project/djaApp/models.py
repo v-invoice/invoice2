@@ -1,14 +1,17 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+from .static import invoice_status
 
 
-class Post(models.Model):
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    title = models.CharField(max_length=200)
-    text = models.TextField()
+
+class Invoice(models.Model):
+    ID = models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')
+    customer_name = models.CharField(max_length=20)
+    quantity = models.DecimalField(max_digits=6, decimal_places=2)
+    status = models.PositiveSmallIntegerField(choices=invoice_status)
     created_date = models.DateTimeField(default=timezone.now)
-    published_date = models.DateTimeField(blank=True, null=True)
+    due_date = models.DateTimeField(blank=True, null=True)
 
     def publish(self):
         self.published_date = timezone.now()
