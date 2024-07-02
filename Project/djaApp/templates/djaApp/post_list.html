@@ -4,6 +4,19 @@
         <title>Django Invoices</title>
     </head>
     <body>
+        
+        <header>
+            <h2><a href="/">Invoice0</a></h2>
+        </header>
+        
+        {% for invoice in invoices %}
+            <article>
+                <time>published: {{ invoice.published_date }}</time>
+                <h2><a href="">{{ invoice.title }}</a></h2>
+                <p>{{ invoice.text|linebreaksbr }}</p>
+            </article>
+        {% endfor %}
+    
         <header>
             <h1><a href="/">Home</a></h1>
         </header>
