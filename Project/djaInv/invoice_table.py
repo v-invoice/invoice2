@@ -9,10 +9,13 @@ while complete==False:
     #row=[ID, name, amount, dueDate, status]
     dataInvoices = {'Invoice ID': ID,'Customer name': name, 'Amount': amount, 'Due date': dueDate, 'Status': status} #dictionary
     #dataInvoices.append(row)   
+
+    submit=str(input('SUBMIT(y/n)'))
+    if submit=='y':
+        complete=True
+
     header=['ID','Name', 'Amount', 'Due Date', 'Status']
     #print(tabulate(dataInvoices, headers=header, tablefmt="grid"))
     print(dataInvoices)
     finish = str(input('Complete?'))
-    if finish=='yes':
-        complete=True
-
+    

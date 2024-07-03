@@ -12,7 +12,7 @@ body {
 }
 
 .page-header {
-    background-color: #2075e3;
+    background-color: #0b3b7a;
     margin-top: 0;
     margin-bottom: 40px;
     padding: 20px 20px 20px 40px;
@@ -72,12 +72,12 @@ h4 {
 
 .btn-secondary,
 .btn-secondary:visited {
-    color: #2075e3;
+    color: #073168;
     background: none;
-    border-color: #2075e3;
+    border-color: #073168;
 }
 
 .btn-secondary:hover {
     color: #FFFFFF;
-    background-color: #2075e3;
+    background-color: #073168;
 }
